@@ -44,3 +44,6 @@ staging:
 production:
   <<: *default_settings
 
+prod:
+  <<: *default_settings
+
