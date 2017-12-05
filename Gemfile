@@ -29,11 +29,14 @@ gem 'newrelic_rpm'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', :platforms => :ruby
 
+group :development do
+  gem 'web-console', '~> 2.0'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
-  gem 'web-console', '~> 2.0'
 end
 
 group :test do
