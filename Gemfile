@@ -33,8 +33,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
-  gem 'web-console', '~> 2.0'
 end
+
+gem 'web-console', '~> 2.0', group: :development
 
 group :test do
   gem 'faker'
