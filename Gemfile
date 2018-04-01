@@ -30,7 +30,7 @@ gem 'newrelic_rpm'
 # gem 'therubyracer', :platforms => :ruby
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '< 3.2'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
 end
