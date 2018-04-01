@@ -4,7 +4,7 @@ RSpec.configure do |config|
   Capybara.run_server = true
   Capybara.server_port = 3000
   Capybara.app_host = 'http://localhost:3000'
-  Capybara.default_wait_time = 5
+  Capybara.default_max_wait_time = 5
 
   Capybara.register_driver :chrome do |app|
     args = []
