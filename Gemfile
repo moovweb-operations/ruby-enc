@@ -33,7 +33,7 @@ gem 'newrelic_rpm'
 group :development, :test do
   gem 'rspec', '~> 3.6.0'
   gem 'rspec-rails', '~> 3.6.0'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'coveralls', require: false
 end
 
