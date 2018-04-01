@@ -5,7 +5,7 @@ gem 'rails', '4.2.8'
 gem 'rake', '< 11.0'
 gem 'mysql2', '0.3.18'
 gem 'puppet', '3.8.5' # NOTE: this should match what we are using in production
-gem 'syck'
+gem 'safe_yaml', '~> 1.0.4'
 gem 'mcollective-client'
 gem 'chartkick'
 gem 'groupdate'
