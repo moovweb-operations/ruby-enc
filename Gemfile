@@ -4,7 +4,7 @@ gem 'syslogger', git: 'https://github.com/jbussdieker/syslogger.git', :branch =>
 gem 'rails', '4.2.8'
 gem 'rake', '< 11.0'
 gem 'mysql2', '0.3.18'
-gem 'puppet', '4.10.10'
+gem 'puppet', '3.8.5' # NOTE: this should match what we are using in production
 gem 'mcollective-client'
 gem 'chartkick'
 gem 'groupdate'
