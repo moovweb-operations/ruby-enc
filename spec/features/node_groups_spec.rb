@@ -18,7 +18,7 @@ describe 'Node Groups' do
     it 'Adds a new node group w/ parameter', :js => true do
       visit node_groups_path
       name = Faker::Lorem.word
-      parameter = FactoryGirl.attributes_for(:parameter)
+      parameter = FactoryBot.attributes_for(:parameter)
 
       expect {
         click_link 'Add Group'
@@ -33,7 +33,7 @@ describe 'Node Groups' do
     end
 
     it 'Edits a node group', :js => true do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       name = Faker::Lorem.word
 
       visit node_group_path(node_group)
@@ -45,7 +45,7 @@ describe 'Node Groups' do
     end
 
     it 'Deletes a node group', :js => true do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       visit node_groups_path
 
       within('#node_groups') do

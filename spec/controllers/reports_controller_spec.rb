@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ReportsController do
   describe "GET #index" do
     it "populates an array of reports" do
-      report = FactoryGirl.create(:report)
+      report = FactoryBot.create(:report)
       get :index
       assigns(:reports).should eq([report])
     end
@@ -16,7 +16,7 @@ describe ReportsController do
 
   describe "GET #show" do
     before :each do
-      @report = FactoryGirl.create(:report)
+      @report = FactoryBot.create(:report)
     end
 
     it "assigns the requested report to @report" do
@@ -36,7 +36,7 @@ describe ReportsController do
       let(:result) { { time.to_date => 1 } }
 
       before :each do
-        @report = FactoryGirl.create(:report, time: time)
+        @report = FactoryBot.create(:report, time: time)
       end
 
       it "assigns the requested report to @report" do
@@ -53,7 +53,7 @@ describe ReportsController do
 
   describe "DELETE #destroy" do
     before :each do
-      @report = FactoryGirl.create(:report)
+      @report = FactoryBot.create(:report)
     end
 
     it "deletes the report" do

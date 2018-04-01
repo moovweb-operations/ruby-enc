@@ -3,7 +3,7 @@ require 'spec_helper'
 describe NodeGroupsController do
   describe "GET #index" do
     it "populates an array of node_groups" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :index
       assigns(:node_groups).should eq([node_group])
     end
@@ -14,26 +14,26 @@ describe NodeGroupsController do
     end
 
     it "renders json" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :index, format: :json
     end
   end
 
   describe "GET #show" do
     it "assigns the requested node_group to @node_group" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :show, id: node_group
       assigns(:node_group).should eq(node_group)
     end
 
     it "renders the #show view" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :show, id: node_group
       response.should render_template :show
     end
 
     it "renders json" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :show, id: node_group, format: :json
     end
   end
@@ -52,13 +52,13 @@ describe NodeGroupsController do
 
   describe "GET #edit" do
     it "assigns the requested node_group to @node_group" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :edit, id: node_group
       assigns(:node_group).should eq(node_group)
     end
 
     it "renders the #edit view" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       get :edit, id: node_group
       response.should render_template :edit
     end
@@ -66,7 +66,7 @@ describe NodeGroupsController do
 
   describe "POST #create" do
     context "with valid attributes" do
-      let(:attributes) { FactoryGirl.attributes_for(:node_group) }
+      let(:attributes) { FactoryBot.attributes_for(:node_group) }
 
       it "creates a new node_group" do
         expect {
@@ -81,7 +81,7 @@ describe NodeGroupsController do
     end
 
     context "with invalid attributes" do
-      let(:attributes) { FactoryGirl.attributes_for(:invalid_node_group) }
+      let(:attributes) { FactoryBot.attributes_for(:invalid_node_group) }
 
       it "does not create a new node_group" do
         expect {
@@ -98,11 +98,11 @@ describe NodeGroupsController do
 
   describe "PUT #update" do
     before :each do
-      @node_group = FactoryGirl.create(:node_group, name: 'foo')
+      @node_group = FactoryBot.create(:node_group, name: 'foo')
     end
 
     context "with valid attributes" do
-      let(:attributes) { FactoryGirl.attributes_for(:node_group, name: 'bar') }
+      let(:attributes) { FactoryBot.attributes_for(:node_group, name: 'bar') }
 
       it "located the requested @node_group" do
         put :update, id: @node_group, node_group: attributes
@@ -122,7 +122,7 @@ describe NodeGroupsController do
     end
 
     context "with invalid attributes" do
-      let(:attributes) { FactoryGirl.attributes_for(:invalid_node_group) }
+      let(:attributes) { FactoryBot.attributes_for(:invalid_node_group) }
 
       it "does not change @node_group's attributes" do
         put :update, id: @node_group, node_group: attributes
@@ -139,14 +139,14 @@ describe NodeGroupsController do
 
   describe "DELETE #destroy" do
     it "deletes the node group" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       expect {
         delete :destroy, id: node_group
       }.to change(NodeGroup, :count).by(-1)
     end
 
     it "redirects back to #index" do
-      node_group = FactoryGirl.create(:node_group)
+      node_group = FactoryBot.create(:node_group)
       delete :destroy, id: node_group
       response.should redirect_to node_groups_path
     end

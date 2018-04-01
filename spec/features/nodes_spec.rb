@@ -18,7 +18,7 @@ describe 'Nodes' do
     it 'Adds a new node w/ parameter', :js => true do
       visit nodes_path
       name = Faker::Lorem.word
-      parameter = FactoryGirl.attributes_for(:parameter)
+      parameter = FactoryBot.attributes_for(:parameter)
 
       expect {
         click_link 'Add Node'
@@ -33,7 +33,7 @@ describe 'Nodes' do
     end
 
     it 'Edits a node', :js => true do
-      node = FactoryGirl.create(:node)
+      node = FactoryBot.create(:node)
       description = Faker::Lorem.word
 
       visit node_path(node)
@@ -46,7 +46,7 @@ describe 'Nodes' do
     end
 
     it 'Deletes a node', :js => true do
-      node = FactoryGirl.create(:node)
+      node = FactoryBot.create(:node)
       visit nodes_path
 
       within('#nodes') do

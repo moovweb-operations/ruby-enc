@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe Report do
   it "has a valid factory" do
-    FactoryGirl.create(:report).should be_valid
+    FactoryBot.create(:report).should be_valid
   end
 
   context "dependents" do
     before(:each) do
-      @report = FactoryGirl.create(:report_with_dependents)
+      @report = FactoryBot.create(:report_with_dependents)
     end
 
     it "deletes metrics" do

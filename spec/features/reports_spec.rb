@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Reports' do
   describe 'Manage Reports' do
     it 'Deletes a report', :js => true do
-      report = FactoryGirl.create(:report_with_dependents)
+      report = FactoryBot.create(:report_with_dependents)
       visit reports_path
 
       first("#report-#{report.id} a").click

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :parameter do
     key { Faker::Lorem.word }
     value { Faker::Lorem.word }
