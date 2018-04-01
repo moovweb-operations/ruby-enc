@@ -31,7 +31,8 @@ gem 'newrelic_rpm'
 # gem 'therubyracer', :platforms => :ruby
 
 group :development, :test do
-  gem 'rspec-rails', '< 3.2'
+  gem 'rspec', '~> 3.6.0'
+  gem 'rspec-rails', '~> 3.6.0'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
 end
