@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :report do
   end
 
@@ -9,7 +9,7 @@ FactoryGirl.define do
   end
 
   factory :report_with_dependents, parent: :full_report do
-    ransient do
+    transient do
       metric_count 5
       report_log_count 5
       resource_status_count 5

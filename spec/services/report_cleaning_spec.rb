@@ -2,8 +2,8 @@ require 'spec_helper.rb'
 
 describe ReportCleaning do
   before do
-    FactoryGirl.create(:report_with_dependents, created_at: 30.days.ago)
-    FactoryGirl.create(:report_with_dependents, created_at: Time.now)
+    FactoryBot.create(:report_with_dependents, created_at: 30.days.ago)
+    FactoryBot.create(:report_with_dependents, created_at: Time.now)
   end
 
   context "clean" do

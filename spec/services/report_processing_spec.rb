@@ -2,7 +2,7 @@ require 'spec_helper.rb'
 require 'tempfile'
 
 describe ReportProcessing do
-  let(:report) { FactoryGirl.create(:report) }
+  let(:report) { FactoryBot.create(:report) }
   let(:report_processing) { ReportProcessing.new(report) }
 
   before(:each) do

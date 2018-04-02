@@ -16,7 +16,7 @@ describe 'Node Classes' do
     end
 
     it 'Edits a node class', :js => true do
-      node_class = FactoryGirl.create(:node_class)
+      node_class = FactoryBot.create(:node_class)
       name = Faker::Lorem.word
 
       visit node_class_path(node_class)
@@ -28,7 +28,7 @@ describe 'Node Classes' do
     end
 
     it 'Deletes a node class', :js => true do
-      node_class = FactoryGirl.create(:node_class)
+      node_class = FactoryBot.create(:node_class)
       visit node_classes_path
 
       within('#node_classes') do

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :node do
     name { Faker::Lorem.word }
   end
@@ -37,7 +37,7 @@ FactoryGirl.define do
   end
 
   factory :node_with_reports, parent: :node do
-    ransient do
+    transient do
       report_count 5
     end
 

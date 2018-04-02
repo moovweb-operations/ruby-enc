@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe NodesController do
-  let(:node) { FactoryGirl.create(:node) }
+  let(:node) { FactoryBot.create(:node) }
 
   describe "GET #index" do
     it "populates an array of nodes" do
@@ -25,7 +25,7 @@ describe NodesController do
   ["unresponsive", "failed", "pending", "changed", "unchanged", "unreported"].each do |status|
     describe "GET ##{status}" do
       before :each do
-        @node = FactoryGirl.create("#{status}_node".to_sym)
+        @node = FactoryBot.create("#{status}_node".to_sym)
       end
 
       it "populates an array of nodes" do
@@ -89,7 +89,7 @@ describe NodesController do
 
   describe "GET #resource_times" do
     context "with report" do
-      let(:node) { FactoryGirl.create(:node_with_all_dependents) }
+      let(:node) { FactoryBot.create(:node_with_all_dependents) }
 
       it "assigns the requested node to @node" do
         get :resource_times, id: node
@@ -133,12 +133,12 @@ describe NodesController do
     context "with valid attributes" do
       it "creates a new node" do
         expect {
-          post :create, node: FactoryGirl.attributes_for(:node)
+          post :create, node: FactoryBot.attributes_for(:node)
         }.to change(Node, :count).by(1)
       end
 
       it "redirects to the new node" do
-        post :create, node: FactoryGirl.attributes_for(:node)
+        post :create, node: FactoryBot.attributes_for(:node)
         response.should redirect_to Node.last
       end
     end
@@ -146,12 +146,12 @@ describe NodesController do
     context "with invalid attributes" do
       it "does not create a new node" do
         expect {
-          post :create, node: FactoryGirl.attributes_for(:invalid_node)
+          post :create, node: FactoryBot.attributes_for(:invalid_node)
         }.to_not change(Node, :count)
       end
 
       it "renders the #new view" do
-        post :create, node: FactoryGirl.attributes_for(:invalid_node)
+        post :create, node: FactoryBot.attributes_for(:invalid_node)
         response.should render_template :new
       end
     end
@@ -159,43 +159,43 @@ describe NodesController do
 
   describe "PUT #update" do
     before :each do
-      @node = FactoryGirl.create(:node, description: 'foo')
+      @node = FactoryBot.create(:node, description: 'foo')
     end
 
     context "with valid attributes" do
       it "located the requested @node" do
-        put :update, id: @node, node: FactoryGirl.attributes_for(:node)
+        put :update, id: @node, node: FactoryBot.attributes_for(:node)
         assigns(:node).should eq(@node)
       end
 
       it "changes @node's attributes" do
         put :update, id: @node, 
-          node: FactoryGirl.attributes_for(:node, description: 'bar')
+          node: FactoryBot.attributes_for(:node, description: 'bar')
         @node.reload
         @node.description.should eq('bar')
       end
 
       it "redirects to show new node" do
-        put :update, id: @node, node: FactoryGirl.attributes_for(:node)
+        put :update, id: @node, node: FactoryBot.attributes_for(:node)
         response.should redirect_to Node.last
       end
     end
 
     context "with invalid attributes" do
       it "located the requested @node" do
-        put :update, id: @node, node: FactoryGirl.attributes_for(:invalid_node)
+        put :update, id: @node, node: FactoryBot.attributes_for(:invalid_node)
         assigns(:node).should eq(@node)
       end
 
       it "does not change @node's attributes" do
         put :update, id: @node, 
-          node: FactoryGirl.attributes_for(:invalid_node, description: 'bar')
+          node: FactoryBot.attributes_for(:invalid_node, description: 'bar')
         @node.reload
         @node.description.should eq('foo')
       end
 
       it "renders the #edit view" do
-        put :update, id: @node, node: FactoryGirl.attributes_for(:invalid_node)
+        put :update, id: @node, node: FactoryBot.attributes_for(:invalid_node)
         response.should render_template :edit
       end
     end

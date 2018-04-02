@@ -43,7 +43,7 @@ describe ApplicationHelper do
 
   describe "link_to_add_fields" do
     let(:name) { "Add Parameter" }
-    let(:node) { FactoryGirl.create(:node) }
+    let(:node) { FactoryBot.create(:node) }
     let(:builder) { double }
     let(:f) { builder }
     let(:association) { :parameters }
