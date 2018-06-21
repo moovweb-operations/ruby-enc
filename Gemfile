@@ -4,7 +4,7 @@ gem 'syslogger', git: 'https://github.com/jbussdieker/syslogger.git', :branch =>
 gem 'rails', '4.2.8'
 gem 'rake', '< 11.0'
 gem 'mysql2', '0.3.18'
-gem 'puppet', '3.8.5' # NOTE: this should match what we are using in production
+gem 'puppet', '5.3.7' # NOTE: this should match what we are using in production
 gem 'safe_yaml', '~> 1.0.4'
 gem 'mcollective-client'
 gem 'chartkick'
@@ -13,7 +13,7 @@ gem 'rails-bootstrap', '~> 3.0.0'
 gem 'kaminari'
 gem 'unicorn'
 
-gem 'sass-rails',   '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.5'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
@@ -38,7 +38,7 @@ group :development, :test do
   gem 'coveralls', require: false
 end
 
-gem 'web-console', '~> 2.0', group: :development
+gem 'web-console', '~> 2.3', '>= 2.3.0', group: :development
 
 group :test do
   gem 'faker'
