@@ -88,7 +88,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.8.7)
       i18n (>= 0.7)
-    ffi (1.9.23)
+    ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     groupdate (3.2.0)
@@ -203,7 +203,7 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    selenium-webdriver (3.11.0)
+    selenium-webdriver (3.13.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     simplecov (0.14.1)
@@ -271,7 +271,7 @@ DEPENDENCIES
   rspec-rails (~> 3.6.0)
   safe_yaml (~> 1.0.4)
   sass-rails (~> 4.0.0)
-  selenium-webdriver
+  selenium-webdriver (>= 3.11.0)
   syslogger!
   uglifier (>= 1.0.3)
   unicorn
