@@ -10,13 +10,13 @@ gem 'mcollective-client'
 gem 'chartkick'
 gem 'groupdate'
 gem 'rails-bootstrap', '~> 3.0.0'
-gem 'kaminari'
+gem 'kaminari', '>= 1.0.1'
 gem 'unicorn'
 
-gem 'sass-rails',   '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.5'
+gem 'coffee-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.0.3'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.3.1'
 gem 'awesome_print'
 
 # attr_accessible` is extracted out of Rails into a gem.
@@ -24,7 +24,7 @@ gem 'awesome_print'
 # or add `protected_attributes` to your Gemfile to use old one
 gem 'protected_attributes'
 
-gem 'responders', '~> 2.0'
+gem 'responders', '~> 2.4', '>= 2.4.0'
 
 gem 'newrelic_rpm'
 
@@ -33,12 +33,12 @@ gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec', '~> 3.6.0'
-  gem 'rspec-rails', '~> 3.6.0'
-  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 3.6.1'
+  gem 'factory_bot_rails', '>= 4.8.2'
   gem 'coveralls', require: false
 end
 
-gem 'web-console', '~> 2.0', group: :development
+gem 'web-console', '~> 2.3', '>= 2.3.0', group: :development
 
 group :test do
   gem 'faker'
