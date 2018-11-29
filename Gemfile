@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'syslogger', git: 'https://github.com/jbussdieker/syslogger.git', :branch => 'implement_log_formatter'
-gem 'rails', '4.2.8'
+gem 'rails', '4.2.11'
 gem 'rake', '< 11.0'
 gem 'mysql2', '0.3.18'
 gem 'puppet', '3.8.5' # NOTE: this should match what we are using in production
