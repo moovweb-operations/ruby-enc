@@ -56,7 +56,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    chartkick (2.2.4)
+    chartkick (3.2.0)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.0.1)
@@ -249,7 +249,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   capybara
-  chartkick
+  chartkick (>= 3.2.0)
   coffee-rails (~> 4.0.0)
   coveralls
   database_cleaner
@@ -278,4 +278,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.16.1
+   1.17.2

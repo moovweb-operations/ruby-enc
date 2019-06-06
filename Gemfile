@@ -7,7 +7,7 @@ gem 'mysql2', '0.3.18'
 gem 'puppet', '3.8.5' # NOTE: this should match what we are using in production
 gem 'safe_yaml', '~> 1.0.4'
 gem 'mcollective-client'
-gem 'chartkick'
+gem 'chartkick', '>= 3.2.0'
 gem 'groupdate'
 gem 'rails-bootstrap', '~> 3.0.0'
 gem 'kaminari'
