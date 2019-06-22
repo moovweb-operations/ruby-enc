@@ -16,7 +16,7 @@ gem 'unicorn'
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.0.3'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.3.4'
 gem 'awesome_print'
 
 # attr_accessible` is extracted out of Rails into a gem.
